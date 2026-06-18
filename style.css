@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding-top: 80px;
+}
+
+/* Navbar*/
+
+li, a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;            
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 5px;    
+    transition: color 0.3s ease;
+}
+
+header {
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;       
+    padding: 24px 5%;        
+    position: fixed;           
+    box-sizing: border-box;   
+    width: 100%;
+    top: 0px;
+}
+
+.logo {
+    margin-top: 10px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 6px;
+}
+
+.nav-links li a:hover{
+    color: #fed136;
+}
+
+/* Responsividade da navbar - menu hamburguer */
+@media (max-width: 800px){
+    li, a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 9px;
+    }
+
+    .logo {
+    font-size: 10px;
+    font-weight: bold;
+    color: #fed136;
+    font-family: 'Kaushan Script';
+    }
+}
