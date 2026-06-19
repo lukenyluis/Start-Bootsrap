@@ -8,13 +8,14 @@ body {
 
 /* Navbar*/
 
-li, a {
+li,
+a {
     text-decoration: none;
     color: #fff;
-    font-size: 15px;            
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 10px 5px;    
+    padding: 10px 5px;
     transition: color 0.3s ease;
 }
 
@@ -22,10 +23,10 @@ header {
     background-color: #212529;
     display: flex;
     justify-content: space-between;
-    align-items: center;       
-    padding: 24px 5%;        
-    position: fixed;           
-    box-sizing: border-box;   
+    align-items: center;
+    padding: 24px 5%;
+    position: fixed;
+    box-sizing: border-box;
     width: 100%;
     top: 0px;
 }
@@ -45,22 +46,107 @@ header {
     padding: 0px 6px;
 }
 
-.nav-links li a:hover{
+.nav-links li a:hover {
     color: #fed136;
 }
 
 /* Responsividade da navbar - menu hamburguer */
-@media (max-width: 800px){
-    li, a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 9px;
+@media (max-width: 800px) {
+
+    li,
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 9px;
     }
 
     .logo {
-    font-size: 10px;
-    font-weight: bold;
-    color: #fed136;
-    font-family: 'Kaushan Script';
+        font-size: 10px;
+        font-weight: bold;
+        color: #fed136;
+        font-family: 'Kaushan Script';
     }
+}
+
+/* Main */
+.main-imagem {
+    position: relative;
+    display: inline-block;
+}
+
+.main-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.texto-sobreposto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 90%;
+    text-align: center;
+    gap: 25px;
+}
+
+.main-button {
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ffc800;
+    color: white;
+    margin-top: 20px;
+}
+
+#main-text1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0;
+}
+
+#main-text2 {
+    font-size: 80px;
+    margin: 0;
+}
+
+/* Service */
+
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    text-align: center;
+    margin-top: -20px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.service-cards {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffc800;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.service-cards img {
+    width: 100px;
+    height: 100px;
 }
