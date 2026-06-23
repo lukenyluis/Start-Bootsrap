@@ -105,7 +105,7 @@ a {
     /* Ocupa a altura inteira da tela */
     object-fit: cover;
     /* Recorta proporcionalmente sem distorcer */
-    opacity: 0.7;
+    opacity: 0.9;
     /* Escurece levemente a imagem de fundo para dar leitura ao texto */
 }
 
@@ -153,7 +153,7 @@ a {
     background-color: #d9aa00;
 }
 
-/* --- SECTION 3 - SERVICES --- */
+/* --- SECTION 2 - SERVICES --- */
 
 .cards {
     padding: 100px 20px;
@@ -175,6 +175,8 @@ a {
     opacity: 0.7;
     color: #6c757d;
     font-size: 16px;
+    font-family: "Roboto Slab";
+
 }
 
 .service-cards {
@@ -226,7 +228,7 @@ a {
     margin: 0;
     text-align: center;
     font-style: normal;
-    opacity: 0.7;
+    opacity: 0.9                                                                    ;
 }
 
 /* --- RESPONSIVIDADE GENERALIZADA (MOBILE) --- */
@@ -308,4 +310,134 @@ a {
     }
 }
 
-/* Ajuste para empilhar os Cards de Serviços verticalmente no celular */
+/* 3. PORTFOLIO */
+
+.portfolio {
+    padding: 100px 20px;
+    background-color: rgb(248, 249, 250);
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.portfolio-header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #212529;
+}
+
+/* Subtítulo corrigido para não herdar margens negativas de outras secções */
+.portfolio-subtitle {
+    font-style: italic;
+    opacity: 0.6;
+    color: #6c757d;
+    font-size: 16px;
+    margin: 0 !important; /* Força a remoção de margens antigas */
+    text-align: center;
+}
+
+/* Grelha que organiza os quadrados */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Estrutura de cada quadrado */
+.portfolio-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Container da Imagem */
+.portfolio-img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Todas as imagens ficam com o mesmo tamanho */
+}
+
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bloco de texto abaixo da imagem corrigido */
+.portfolio-caption {
+    padding: 25px 15px; /* Ajuste do espaçamento interno */
+    text-align: center;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.portfolio-caption h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px 0; /* Espaço controlado abaixo do título */
+    color: #212529;
+}
+
+/* Texto da categoria limpo e sem propriedades herdadas do Services */
+.portfolio-caption p {
+    font-size: 14px;
+    color: #6c757d;
+    font-style: italic;
+    margin: 0 !important; /* Remove qualquer margem negativa herdada */
+    padding: 0 !important;
+    text-align: center;
+    opacity: 0.7;
+}
+
+
+/* --- RESPONSIVIDADE PARA OS QUADRADOS --- */
+
+@media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* --- MUDAR A OPACIDADE PARA AMARELO --- */
+
+.portfolio-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 200, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity ease 0.4s;
+    z-index: 1;    
+}
+
+.portfolio-hover-content i {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Ativação suave do hover ao passar o mouse */
+.portfolio-card:hover .portfolio-hover {
+    opacity: 1;
+    cursor: pointer;
+}
