@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
     font-family: 'Montserrat';
@@ -137,16 +138,84 @@ p {
 }
 
 .service-cards {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ffc800;
-    align-items: center;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    /* Espaço entre os cards */
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.service-cards img {
-    width: 100px;
-    height: 100px;
+.card-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centraliza o ícone dentro do círculo */
+
+    /* Configurações do Círculo */
+    background-color: #f1c40f;
+    /* O amarelo vibrante da imagem */
+    width: 130px;
+    /* Tamanho do círculo */
+    height: 130px;
+    /* Tamanho do círculo */
+    border-radius: 50%;
+    /* Torna o fundo um círculo perfeito */
+
+    /* Centralização e Espaçamento */
+    margin: 0 auto 25px auto;
+    /* Centraliza o círculo no card e dá espaço abaixo */
+}
+
+/* Estilo individual de cada card */
+.service-card {
+    flex: 1;
+    text-align: center;
+    /* Centraliza o ícone, título e texto */
+    max-width: 350px;
+}
+
+/* Alinhamento e tamanho dos ícones */
+.card-icone {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.card-icone img {
+    width: 130px;
+    /* Ajuste o tamanho do círculo amarelo aqui se necessário */
+    height: 130px;
+    object-fit: contain;
+}
+
+/* Estilização dos Títulos (h3) */
+.service-card h3 {
+    font-size: 24px;
+    color: #1a252f;
+    /* Tom de preto levemente azulado/escuro */
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+/* Estilização dos Parágrafos (p) */
+.service-card p {
+    font-size: 15px;
+    color: #7f8c8d;
+    /* Cinza igual ao da imagem */
+    line-height: 1.6;
+    /* Espaçamento entre as linhas de texto */
+    margin: 0;
+}
+
+/* Responsividade: Empilha os cards em telas menores (como celulares) */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
 }
