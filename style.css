@@ -1,13 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding-top: 80px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Navbar*/
+/* --- ANIMAÇÕES SENSÍVEIS AO SCROLL (DESKTOP) --- */
+
+@keyframes diminuirNavbar {
+    from {
+        background-color: transparent;
+        padding: 24px 5%;
+    }
+
+    to {
+        background-color: #212529;
+        padding: 25px 5%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@keyframes diminuirLogo {
+    from {
+        width: 200px;
+    }
+
+    to {
+        width: 150px;
+    }
+}
+
+/* --- ESTILOS BASE DA NAVBAR (DESKTOP) --- */
+
+header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 5%;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0px;
+    z-index: 1000;
+
+    animation: diminuirNavbar linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 120px;
+}
+
+.logo {
+    display: block;
+    height: auto;
+    animation: diminuirLogo linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 120px;
+}
 
 li,
 a {
@@ -20,26 +70,10 @@ a {
     transition: color 0.3s ease;
 }
 
-header {
-    background-color: #212529;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 5%;
-    position: fixed;
-    box-sizing: border-box;
-    width: 100%;
-    top: 0px;
-}
-
-.logo {
-    margin-top: 10px;
-    width: 200px;
-    margin-left: 20px;
-}
-
 .nav-links {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
@@ -51,66 +85,45 @@ header {
     color: #fed136;
 }
 
-/* Responsividade da navbar - menu hamburguer */
-@media (max-width: 800px) {
-
-    li,
-    a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 9px;
-    }
-
-    .logo {
-        font-size: 10px;
-        font-weight: bold;
-        color: #fed136;
-        font-family: 'Kaushan Script';
-    }
+.menu-checkbox,
+.menu-button {
+    display: none;
 }
 
-/* Main */
+/* --- SECTION 2 - MAIN IMAGE (CAPA) --- */
+
 .main-imagem {
     position: relative;
-    display: inline-block;
+    width: 100%;
+    background-color: #000;
 }
 
 .main-imagem img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    /* Ocupa a altura inteira da tela */
+    object-fit: cover;
+    /* Recorta proporcionalmente sem distorcer */
+    opacity: 0.7;
+    /* Escurece levemente a imagem de fundo para dar leitura ao texto */
 }
 
 .texto-sobreposto {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+    top: 60%;
+    left: 60%;
+    transform: translate(-60%, -60%);
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     width: 90%;
     text-align: center;
-    gap: 25px;
-}
-
-.main-button {
-    padding: 20px 40px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: #ffc800;
-    color: white;
-    margin-top: 20px;
+    gap: 15px;
 }
 
 #main-text1 {
-    font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 40px;
@@ -118,23 +131,50 @@ header {
 }
 
 #main-text2 {
-    font-size: 80px;
+    font-size: 75px;
+    font-weight: 700;
     margin: 0;
 }
 
-/* Service */
-
-
-h2 {
-    text-align: center;
-    font-size: 40px;
+.main-button {
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ffc800;
+    color: white;
+    margin-top: 20px;
+    transition: background-color 0.2s;
 }
 
-p {
+.main-button:hover {
+    background-color: #d9aa00;
+}
+
+/* --- SECTION 3 - SERVICES --- */
+
+.cards {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+#service-title {
     text-align: center;
-    margin-top: -20px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+.service-subtitle {
+    text-align: center;
+    margin-bottom: 60px;
     font-style: italic;
-    opacity: 0.6;
+    opacity: 0.7;
+    color: #6c757d;
+    font-size: 16px;
 }
 
 .service-cards {
@@ -142,80 +182,130 @@ p {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    /* Espaço entre os cards */
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
+.service-card {
+    flex: 1;
+    text-align: center;
+    max-width: 350px;
+}
+
+/* Ajuste e centralização sutil dos ícones dentro do círculo */
 .card-icone {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Centraliza o ícone dentro do círculo */
-
-    /* Configurações do Círculo */
-    background-color: #f1c40f;
-    /* O amarelo vibrante da imagem */
+    background-color: #ffc800;
+    /* Tom correto de amarelo Bootstrap */
     width: 130px;
-    /* Tamanho do círculo */
     height: 130px;
-    /* Tamanho do círculo */
     border-radius: 50%;
-    /* Torna o fundo um círculo perfeito */
-
-    /* Centralização e Espaçamento */
     margin: 0 auto 25px auto;
-    /* Centraliza o círculo no card e dá espaço abaixo */
-}
-
-/* Estilo individual de cada card */
-.service-card {
-    flex: 1;
-    text-align: center;
-    /* Centraliza o ícone, título e texto */
-    max-width: 350px;
-}
-
-/* Alinhamento e tamanho dos ícones */
-.card-icone {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
 }
 
 .card-icone img {
-    width: 130px;
-    /* Ajuste o tamanho do círculo amarelo aqui se necessário */
-    height: 130px;
+    width: 65px;
+    /* Tamanho controlado do ícone */
+    height: 65px;
     object-fit: contain;
 }
 
-/* Estilização dos Títulos (h3) */
 .service-card h3 {
     font-size: 24px;
-    color: #1a252f;
-    /* Tom de preto levemente azulado/escuro */
+    color: #212529;
     font-weight: 700;
-    margin-bottom: 15px;
-    margin-top: 0;
+    margin: 0 0 15px 0;
 }
 
-/* Estilização dos Parágrafos (p) */
-.service-card p {
+.service-card p.card-text {
     font-size: 15px;
-    color: #7f8c8d;
-    /* Cinza igual ao da imagem */
-    line-height: 1.6;
-    /* Espaçamento entre as linhas de texto */
+    color: #6c757d;
+    line-height: 1.65;
     margin: 0;
+    text-align: center;
+    font-style: normal;
+    opacity: 0.7;
 }
 
-/* Responsividade: Empilha os cards em telas menores (como celulares) */
+/* --- RESPONSIVIDADE GENERALIZADA (MOBILE) --- */
+
+@media (max-width: 800px) {
+
+    /* Configuração Responsiva da Navbar */
+    header {
+        flex-wrap: wrap;
+        padding: 15px 5%;
+        background-color: #212529;
+        animation: none;
+    }
+
+    .logo {
+        width: 140px;
+        animation: none;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #8a8d91;
+        font-size: 12px;
+        font-weight: bold;
+        border: 2px solid #5a5d61;
+        border-radius: 8px;
+        padding: 8px 16px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 15px;
+        display: none;
+    }
+
+    .menu-checkbox:checked~nav {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        display: block;
+        padding: 12px 0px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Ajustes dos textos da capa no Mobile */
+    #main-text1 {
+        font-size: 28px;
+    }
+
+    #main-text2 {
+        font-size: 40px;
+    }
+}
+
 @media (max-width: 768px) {
+
+    /* Ajuste para empilhar os Cards de Serviços verticalmente no telefone */
     .service-cards {
         flex-direction: column;
         align-items: center;
         gap: 50px;
     }
 }
+
+/* Ajuste para empilhar os Cards de Serviços verticalmente no celular */
