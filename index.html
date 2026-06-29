@@ -12,32 +12,28 @@
 <body>
 
     <header>
-
-        <!-- NAVBAR -->
-
-        <img src="imgs/navbar-logo.svg" class="logo" alt="Logo">
-
+        <a href="#pagina-inicial" class="logo-link">
+            <img src="imgs/navbar-logo.svg" class="logo" alt="Logo">
+        </a>
         <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-
         <label for="menu-toggle" class="menu-button">
             MENU <span class="hamburger">☰</span>
         </label>
-
         <nav>
             <ul class="nav-links">
                 <li><a href="#services">SERVICES</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">TEAM</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="#portfolioSection">PORTFOLIO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#team">TEAM</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="pagina inicial">
-            <!-- PAG INICIAL -->
 
+        <!-- ========== HERO ========== -->
+        <section id="pagina-inicial">
             <div class="main-imagem">
                 <img src="imgs/header-bg.jpg" alt="Imagem de capa">
                 <div class="texto-sobreposto">
@@ -48,332 +44,324 @@
             </div>
         </section>
 
+        <!-- ========== SERVICES ========== -->
         <section id="services">
-            <!-- PAG SERVICE -->
-
-            <div class="cards">
-                <div class="portfolio-header">
+            <div class="section-wrapper">
+                <div class="section-header">
                     <h2>SERVICES</h2>
-                    <p class="service-subtitle">Lorem ipsum, dolor sit amet consectetur.</p>
+                    <p class="section-subtitle">Lorem ipsum, dolor sit amet consectetur.</p>
                 </div>
 
                 <div class="service-cards">
                     <div class="service-card">
                         <div class="card-icone">
-                            <svg class="svg-inline--fa fa-cart-shopping fa-stack-1x fa-inverse" aria-hidden="true"
-                                focusable="false" data-prefix="fas" data-icon="cart-shopping" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512">
                                 <path fill="currentColor"
-                                    d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
-                                </path>
+                                    d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
                             </svg>
                         </div>
                         <h3>E-Commerce</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
-                            quam
-                            architecto quo inventore harum ex magni, dicta impedit.</p>
+                            quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
 
                     <div class="service-card">
                         <div class="card-icone">
-                            <svg class="svg-inline--fa fa-laptop fa-stack-1x fa-inverse" aria-hidden="true"
-                                focusable="false" data-prefix="fas" data-icon="laptop" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 512">
                                 <path fill="currentColor"
-                                    d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z">
-                                </path>
+                                    d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z" />
                             </svg>
                         </div>
                         <h3>Responsive Design</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
-                            quam
-                            architecto quo inventore harum ex magni, dicta impedit.</p>
+                            quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
 
                     <div class="service-card">
                         <div class="card-icone">
-                            <svg class="svg-inline--fa fa-lock fa-stack-1x fa-inverse" aria-hidden="true"
-                                focusable="false" data-prefix="fas" data-icon="lock" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
                                 <path fill="currentColor"
-                                    d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z">
-                                </path>
+                                    d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
                             </svg>
                         </div>
                         <h3>Web Security</h3>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
-                            quam
-                            architecto quo inventore harum ex magni, dicta impedit.</p>
+                            quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio">
-            <!-- PAG PORTFOLIO -->
-
-            <div class="portfolio-header">
-                <h2>PORTFOLIO</h2>
-                <p class="portfolio-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+        <!-- ========== PORTFOLIO ========== -->
+        <section id="portfolioSection">
+            <div class="section-header">
+                <h2 class="portfolioText">PORTFOLIO</h2>
+                <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
 
-            <!-- PORTFOLIO CARDS -->
-            <div class="cards">
-                <div class="card" data-index="0">
-                    <div class="image-container"><img src="imgs/portfolio/1.jpg" alt="Threads"></div>
-                    <h2>Threads</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="image-container" onclick="openModal(0)">
+                        <img src="imgs/portfolio/1.jpg" alt="Threads">
+                        <div class="overlay-icon">+</div>
+                    </div>
+                    <h3>Threads</h3>
                     <p>Illustration</p>
                 </div>
-                <div class="card" data-index="1">
-                    <div class="image-container"><img src="imgs/portfolio/2.jpg" alt="Explore"></div>
-                    <h2>Explore</h2>
+                <div class="portfolio-card">
+                    <div class="image-container" onclick="openModal(1)">
+                        <img src="imgs/portfolio/2.jpg" alt="Explore">
+                        <div class="overlay-icon">+</div>
+                    </div>
+                    <h3>Explore</h3>
                     <p>Graphic Design</p>
                 </div>
-                <div class="card" data-index="2">
-                    <div class="image-container"><img src="imgs/portfolio/3.jpg" alt="Finish"></div>
-                    <h2>Finish</h2>
+                <div class="portfolio-card">
+                    <div class="image-container" onclick="openModal(2)">
+                        <img src="imgs/portfolio/3.jpg" alt="Finish">
+                        <div class="overlay-icon">+</div>
+                    </div>
+                    <h3>Finish</h3>
                     <p>Identity</p>
                 </div>
-                <div class="card" data-index="3">
-                    <div class="image-container"><img src="imgs/portfolio/4.jpg" alt="Lines"></div>
-                    <h2>Lines</h2>
+                <div class="portfolio-card">
+                    <div class="image-container" onclick="openModal(3)">
+                        <img src="imgs/portfolio/4.jpg" alt="Lines">
+                        <div class="overlay-icon">+</div>
+                    </div>
+                    <h3>Lines</h3>
                     <p>Branding</p>
                 </div>
-                <div class="card" data-index="4">
-                    <div class="image-container"><img src="imgs/portfolio/5.jpg" alt="Southwest"></div>
-                    <h2>Southwest</h2>
+                <div class="portfolio-card">
+                    <div class="image-container" onclick="openModal(4)">
+                        <img src="imgs/portfolio/5.jpg" alt="Southwest">
+                        <div class="overlay-icon">+</div>
+                    </div>
+                    <h3>Southwest</h3>
                     <p>Website Design</p>
                 </div>
-                <div class="card" data-index="5">
-                    <div class="image-container"><img src="imgs/portfolio/6.jpg" alt="Window"></div>
-                    <h2>Window</h2>
+                <div class="portfolio-card">
+                    <div class="image-container" onclick="openModal(5)">
+                        <img src="imgs/portfolio/6.jpg" alt="Window">
+                        <div class="overlay-icon">+</div>
+                    </div>
+                    <h3>Window</h3>
                     <p>Photography</p>
                 </div>
             </div>
+        </section>
 
-            <!-- MODAL ÚNICO (gerido pelo JS) -->
-            <div class="modal-container" id="portfolioModal">
-                <div class="box" id="modalBox">
-                    <img src="imgs/portfolio/close-icon.svg" alt="encerrar" class="close" id="modalClose">
-                    <span class="mainTextModal">
-                        <h2 class="textModal" id="modalTitle">PROJECT NAME</h2>
-                        <p class="mainParagraph" id="modalSubtitle">Lorem ipsum dolor sit amet consectetur.</p>
-                    </span>
-                    <img src="" alt="" class="item" id="modalImage">
-                    <p id="paragraph"></p>
-                    <span id="info">
-                        <p><b>Client:</b> <span id="modalClient"></span></p>
-                        <p><b>Category:</b> <span id="modalCategory"></span></p>
-                    </span>
-                    <button class="closeModal" id="modalCloseBtn">CLOSE PROJECT</button>
+        <!-- ========== MODAL ÚNICO DINÂMICO ========== -->
+        <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+            <div class="modal-box" id="modalBox">
+                <button class="modal-close" id="modalClose" onclick="closeModal()" aria-label="Fechar modal">✕</button>
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modalTitle">PROJECT NAME</h2>
+                    <p class="modal-subtitle" id="modalSubtitle">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
+                <img src="" alt="" class="modal-img" id="modalImg">
+                <p class="modal-description" id="modalDescription">
+                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                </p>
+                <div class="modal-info" id="modalInfo">
+                    <p><b>Client:</b> <span id="modalClient">—</span></p>
+                    <p><b>Category:</b> <span id="modalCategory">—</span></p>
+                </div>
+                <button class="btn-close-modal" onclick="closeModal()">CLOSE PROJECT</button>
+            </div>
+        </div>
+
+        <!-- ========== ABOUT ========== -->
+        « <section class="about" id="about">
+            <div class="section-header">
+                <h2>ABOUT</h2>
+                <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item left">
+                    <div class="tl-content">
+                        <h3>2009-2011 <br> Our Humble Beginnings</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                            eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                    <div class="tl-circle">
+                        <img src="imgs/about/1.jpg" alt="2009-2011">
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="tl-circle">
+                        <img src="imgs/about/2.jpg" alt="March 2011">
+                    </div>
+                    <div class="tl-content">
+                        <span class="tl-date"></span>
+                        <h3>March 2011 <br> An Agency is Born</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                            eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="tl-content">
+                        <h3>December 2015 <br> Transition to Full Service</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                            eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                    <div class="tl-circle">
+                        <img src="imgs/about/3.jpg" alt="December 2015">
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="tl-circle">
+                        <img src="imgs/about/4.jpg" alt="July 2020">
+                    </div>
+                    <div class="tl-content">
+                        <h3>July 2020 <br> Phase Two Expansion</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum
+                            eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
+                            unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
+                </div>
+
+                <div class="tl-cta">
+                    <div id="circulo">
+                        <p>Be Part<br>Of Our<br>Story!</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-
-
-        </section>
-
-
-
-
-        <!-- ABOUT -->
-
-
-        <section class="about">
-            <div class="portfolio-header">
-                <h1>ABOUT</h1>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-
-            <div>
-                <h2>2009-2011
-                    Our Humble Beginnings</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Sunt ut voluptatum eius sapiente, totam reiciendis
-                    temporibus qui quibusdam, recusandae sit vero unde,
-                    sed, incidunt et ea quo dolore laudantium consectetur!</p>
-            </div>
-
-            <div>
-                <h2>March 2011
-                    An Agency is Born</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Sunt ut voluptatum eius sapiente, totam reiciendis
-                    temporibus qui quibusdam, recusandae sit vero unde,
-                    sed, incidunt et ea quo dolore laudantium consectetur!</p>
-            </div>
-
-            <div>
-                <h2>December 2015
-                    Transition to Full Service</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Sunt ut voluptatum eius sapiente, totam reiciendis
-                    temporibus qui quibusdam, recusandae sit vero unde,
-                    sed, incidunt et ea quo dolore laudantium consectetur!</p>
-            </div>
-
-            <div>
-                <h2>July 2020
-                    Phase Two Expansion</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Sunt ut voluptatum eius sapiente, totam reiciendis
-                    temporibus qui quibusdam, recusandae sit vero unde,
-                    sed, incidunt et ea quo dolore laudantium consectetur!</p>
-            </div>
-
-            <div id="circulo">
-                <p>Be Part
-                    Of Our
-                    Story!</p>
-            </div>
-
-        </section>
-
-
-        <section class="team">
-            <div>
-                <h1>Our Amazing Team</h1>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <!-- ========== TEAM ========== -->
+        <section class="team" id="team">
+            <div class="section-header">
+                <h2>Our Amazing Team</h2>
+                <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
             </div>
 
             <div class="section-team">
-                <div>
-                    <img src="imgs/team/1.jpg" alt="">
-                    <h2>Parveen Anand</h2>
+                <div class="team-member">
+                    <img src="imgs/team/1.jpg" alt="Parveen Anand">
+                    <h3>Parveen Anand</h3>
                     <p>Lead Designer</p>
-
-                    <img src="imgs/team-redes-sociais/pomba.png" alt="">
-                    <img src="imgs/team-redes-sociais/face.png" alt="">
-                    <img src="imgs/team-redes-sociais/in .png" alt="">
+                    <div class="team-social">
+                        <a href="#!" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#!" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#!" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
                 </div>
-
-                <div>
-                    <img src="imgs/team/2.jpg" alt="">
-                    <h2>Diana Petersen</h2>
+                <div class="team-member">
+                    <img src="imgs/team/2.jpg" alt="Diana Petersen">
+                    <h3>Diana Petersen</h3>
                     <p>Lead Marketer</p>
-
-                    <img src="imgs/team-redes-sociais/pomba.png" alt="">
-                    <img src="imgs/team-redes-sociais/face.png" alt="">
-                    <img src="imgs/team-redes-sociais/in .png" alt="">
+                    <div class="team-social">
+                        <a href="#!" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#!" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#!" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
                 </div>
-
-                <div>
-                    <img src="imgs/team/3.jpg" alt="">
-                    <h2>Lead Marketer</h2>
-                    <p>Lead Marketer</p>
-
-                    <img src="imgs/team-redes-sociais/pomba.png" alt="">
-                    <img src="imgs/team-redes-sociais/face.png" alt="">
-                    <img src="imgs/team-redes-sociais/in .png" alt="">
+                <div class="team-member">
+                    <img src="imgs/team/3.jpg" alt="Larry Parker">
+                    <h3>Larry Parker</h3>
+                    <p>Lead Developer</p>
+                    <div class="team-social">
+                        <a href="#!" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#!" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#!" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
                 </div>
+            </div>
+            <p class="team-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam
+                veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        </section>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non
-                    quis ad 4
-                    perspiciatis, totam corporis ea, alias ut unde.</p>
+        <!-- ========== PATROCIANDORES ========== -->
+        <section class="clients">
+            <div class="clients-logos">
+                <img src="imgs/contact/microsoft.svg" alt="Microsoft">
+                <img src="imgs/contact/google.svg" alt="Google">
+                <img src="imgs/contact/facebook.svg" alt="Facebook">
+                <img src="imgs/contact/ibm.svg" alt="IBM">
             </div>
         </section>
 
+        <!-- ========== CONTACT ========== -->
 
-        <section class="contact">
-            <div>
-                <img src="imgs/contact/microsoft.svg" alt="">
-                <img src="imgs/contact/google.svg" alt="">
-                <img src="imgs/contact/facebook.svg" alt="">
-                <img src="imgs/contact/ibm.svg" alt="">
-            </div>
-        </section>
-
-        <!-- Contact-->
         <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <div class="contactWrapper">
+                <div class="section-header">
+                    <h2>Contact Us</h2>
+                    <p class="contactParagraph">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
 
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *"
-                                    data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *"
-                                    data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
-                                </div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
-                                    data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is
-                                    required.</div>
-                            </div>
+                <!-- INPUTS -->
+                <div class="inputs">
+                    <!-- PERSONAL DATA -->
+                    <div class="personalData">
+                        <div class="inputBox">
+                            <input type="text" placeholder="Your Name*" class="input">
+                            <i class="fa-solid fa-circle-exclamation errorIcon errorIcons"></i>
+                            <p class="errorMessage">A name is required</p>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *"
-                                    data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                                </div>
-                            </div>
+                        <div class="inputBox">
+                            <input type="email" placeholder="Your Email*" class="input">
+                            <i class="fa-solid fa-circle-exclamation errorIcon errorIcons"></i>
+                            <p class="errorMessage">An email is required</p>
+                            <p class="errorEmail">Email is not valid</p>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Your Phone*" class="input">
+                            <i class="fa-solid fa-circle-exclamation errorIcon errorIcons"></i>
+                            <p class="errorMessage">A phone number is required</p>
                         </div>
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a
-                                href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
+
+                    <!-- MESSAGE INPUT -->
+                    <div class="messageInput">
+                        <textarea placeholder="Your Message*" class="input"></textarea>
+                        <i class="fa-solid fa-circle-exclamation messageErrorIcon errorIcons"></i>
+                        <p class="errorMessage">A message is required</p>
                     </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage">
-                        <div class="text-center text-danger mb-3">Error sending message!</div>
-                    </div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled"
-                            id="submitButton" type="submit">Send Message</button></div>
-                </form>
+                </div>
+
+                <!-- BUTTON -->
+                <button disabled id="submitButton">SEND MESSAGE</button>
+
+                <!-- ANSWER AFTER SUBMIT -->
+                <div class="answerSubmit">
+                    <p><b>Form submission successful!</b></p>
+                    <p>To activate this form, sign up at</p>
+                    <a
+                        href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                </div>
             </div>
         </section>
-    </main>
-    <!-- Footer-->
-    <footer class="footer py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start">Copyright & copy; Your Website 2023</div>
-                <div class="col-lg-4 my-3 my-lg-0">
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
-                            class="fab fa-twitter"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
-                            class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                </div>
-            </div>
-    </footer>
 
+        <footer>
+            <p>Copyright © Your Website 2023</p>
+            <div class="socialMedia">
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+            </div>
+            <div class="responsabilityptions">
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
 </body>
 
 </html>

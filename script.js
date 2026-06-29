@@ -1,56 +1,113 @@
-// ─── DADOS DOS CARDS ───────────────────────────────────────────────────────────
+// ============================================================
+//  DADOS DOS PROJECTOS DO PORTFOLIO
+//  Edita aqui para actualizar o conteúdo de cada modal
+// ============================================================
 const portfolioData = [
-    { title: "Threads",   subtitle: "Lorem ipsum dolor sit amet consectetur.", img: "imgs/portfolio/1.jpg", desc: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", client: "Threads",   category: "Illustration"   },
-    { title: "Explore",   subtitle: "Lorem ipsum dolor sit amet consectetur.", img: "imgs/portfolio/2.jpg", desc: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", client: "Explore",   category: "Graphic Design" },
-    { title: "Finish",    subtitle: "Lorem ipsum dolor sit amet consectetur.", img: "imgs/portfolio/3.jpg", desc: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", client: "Finish",    category: "Identity"       },
-    { title: "Lines",     subtitle: "Lorem ipsum dolor sit amet consectetur.", img: "imgs/portfolio/4.jpg", desc: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", client: "Lines",     category: "Branding"       },
-    { title: "Southwest", subtitle: "Lorem ipsum dolor sit amet consectetur.", img: "imgs/portfolio/5.jpg", desc: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", client: "Southwest", category: "Website Design" },
-    { title: "Window",    subtitle: "Lorem ipsum dolor sit amet consectetur.", img: "imgs/portfolio/6.jpg", desc: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", client: "Window",    category: "Photography"    },
+    {
+        title:       "Threads",
+        subtitle:    "Illustration",
+        img:         "imgs/portfolio/1.jpg",
+        description: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+        client:      "Threads Co.",
+        category:    "Illustration"
+    },
+    {
+        title:       "Explore",
+        subtitle:    "Graphic Design",
+        img:         "imgs/portfolio/2.jpg",
+        description: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+        client:      "Explore Agency",
+        category:    "Graphic Design"
+    },
+    {
+        title:       "Finish",
+        subtitle:    "Identity",
+        img:         "imgs/portfolio/3.jpg",
+        description: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+        client:      "Finish Brand",
+        category:    "Identity"
+    },
+    {
+        title:       "Lines",
+        subtitle:    "Branding",
+        img:         "imgs/portfolio/4.jpg",
+        description: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+        client:      "Lines Studio",
+        category:    "Branding"
+    },
+    {
+        title:       "Southwest",
+        subtitle:    "Website Design",
+        img:         "imgs/portfolio/5.jpg",
+        description: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+        client:      "Southwest Inc.",
+        category:    "Website Design"
+    },
+    {
+        title:       "Window",
+        subtitle:    "Photography",
+        img:         "imgs/portfolio/6.jpg",
+        description: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+        client:      "Window Studio",
+        category:    "Photography"
+    }
 ];
 
-// ─── SELECTORES DO MODAL ───────────────────────────────────────────────────────
-const modalContainer = document.getElementById("portfolioModal");
-const modalBox       = document.getElementById("modalBox");
-const modalClose     = document.getElementById("modalClose");
-const modalCloseBtn  = document.getElementById("modalCloseBtn");
-const modalImage     = document.getElementById("modalImage");
-const modalTitle     = document.getElementById("modalTitle");
-const modalSubtitle  = document.getElementById("modalSubtitle");
-const modalDesc      = document.getElementById("paragraph");
-const modalClient    = document.getElementById("modalClient");
-const modalCategory  = document.getElementById("modalCategory");
+// ============================================================
+//  REFERÊNCIAS AO MODAL ÚNICO
+// ============================================================
+const modalOverlay    = document.getElementById("modalOverlay");
+const modalBox        = document.getElementById("modalBox");
+const modalTitle      = document.getElementById("modalTitle");
+const modalSubtitle   = document.getElementById("modalSubtitle");
+const modalImg        = document.getElementById("modalImg");
+const modalDescription= document.getElementById("modalDescription");
+const modalClient     = document.getElementById("modalClient");
+const modalCategory   = document.getElementById("modalCategory");
 
-// ─── FUNÇÕES ───────────────────────────────────────────────────────────────────
+// ============================================================
+//  ABRIR MODAL — preenche dinamicamente com os dados do item
+// ============================================================
 function openModal(index) {
     const data = portfolioData[index];
-    modalImage.src            = data.img;
-    modalImage.alt            = data.title;
-    modalTitle.textContent    = data.title;
-    modalSubtitle.textContent = data.subtitle;
-    modalDesc.textContent     = data.desc;
-    modalClient.textContent   = data.client;
-    modalCategory.textContent = data.category;
 
-    modalContainer.classList.add("activeModal");
-    modalBox.classList.add("modal");
+    modalTitle.textContent       = data.title;
+    modalSubtitle.textContent    = data.subtitle;
+    modalImg.src                 = data.img;
+    modalImg.alt                 = data.title;
+    modalDescription.textContent = data.description;
+    modalClient.textContent      = data.client;
+    modalCategory.textContent    = data.category;
+
+    modalOverlay.classList.add("activeModal");
     document.body.style.overflow = "hidden";
 }
 
+// ============================================================
+//  FECHAR MODAL
+// ============================================================
 function closeModal() {
-    modalContainer.classList.remove("activeModal");
-    modalBox.classList.remove("modal");
+    modalOverlay.classList.remove("activeModal");
     document.body.style.overflow = "";
 }
 
-// ─── EVENTOS ───────────────────────────────────────────────────────────────────
-document.querySelectorAll(".card").forEach(card => {
-    card.querySelector(".image-container").addEventListener("click", function () {
-        openModal(parseInt(card.dataset.index));
-    });
+// ============================================================
+//  FECHAR AO CLICAR NO OVERLAY (fora do box)
+//  stopPropagation no modalBox garante que clicar dentro não fecha
+// ============================================================
+function handleOverlayClick(event) {
+    closeModal();
+}
+
+modalBox.addEventListener("click", function (event) {
+    event.stopPropagation(); // impede propagação para o overlay
 });
 
-modalClose.addEventListener("click", closeModal);
-modalCloseBtn.addEventListener("click", closeModal);
-modalContainer.addEventListener("click", function (e) {
-    if (e.target === modalContainer) closeModal();
+// ============================================================
+//  FECHAR COM TECLA ESC
+// ============================================================
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
 });
